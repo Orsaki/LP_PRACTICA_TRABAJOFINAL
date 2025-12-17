@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import os  
 
 # --- CONFIGURACIÓN ---
 # 1. Lista de países de Sudamérica
@@ -94,5 +95,30 @@ if todos_los_datos:
     # df_final.to_csv('datos_sudamerica.csv', index=False)
     # print("Guardado en 'datos_sudamerica.csv'")
 
+
+# ... (todo el código anterior de descarga y unión) ...
+
+# --- GUARDADO EN CARPETA ---
+if todos_los_datos:
+    # 1. Definimos la carpeta y el nombre del archivo
+    nombre_carpeta = "archivos csv"
+    nombre_archivo = "datos_sudamerica.csv"
+    
+    # 2. Truco Pro: Validar si la carpeta existe localmente
+    # Si descargaste el repo pero la carpeta estaba vacía, a veces Git no la crea.
+    # Esto asegura que la carpeta exista antes de guardar para que no dé error.
+    if not os.path.exists(nombre_carpeta):
+        os.makedirs(nombre_carpeta)
+        print(f"Nota: Se creó la carpeta '{nombre_carpeta}' porque no existía.")
+
+    # 3. Crear la ruta completa (ej: archivos csv/datos_sudamerica.csv)
+    ruta_completa = os.path.join(nombre_carpeta, nombre_archivo)
+
+    # 4. Guardar
+    print(f"Guardando datos en: {ruta_completa}...")
+    df_final.to_csv(ruta_completa, index=False) 
+    print("¡Éxito! Archivo guardado y listo para subir a GitHub.")
+
 else:
     print("No se pudieron obtener datos.")
+
