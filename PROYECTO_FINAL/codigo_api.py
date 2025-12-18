@@ -8,7 +8,7 @@ url = "https://data360api.worldbank.org/data360/data"
 parametros = {
     "DATABASE_ID": "WB_WDI",
     "REF_AREA": "PER",
-    "INDICATOR": "WB_WDI_NY_GDP_MKTP_KD"  # <--- ¡EL CÓDIGO CORRECTO!
+    "INDICATOR": "WB_WDI_NY_GDP_MKTP_KD"  
 }
 
 response = requests.get(url, params=parametros)
