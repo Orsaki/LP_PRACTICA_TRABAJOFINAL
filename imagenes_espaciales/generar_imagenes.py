@@ -1,5 +1,3 @@
-# generar_imagenes_nuevas.py
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -66,4 +64,5 @@ plt.savefig(os.path.join(carpeta_imagenes,'correlaciones_indicadores.png'))
 plt.close()
 
 print("Imágenes nuevas generadas en la carpeta 'imagenes_espaciales'.")
+
 
