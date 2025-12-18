@@ -65,4 +65,5 @@ plt.tight_layout()
 plt.savefig(os.path.join(carpeta_imagenes,'correlaciones_indicadores.png'))
 plt.close()
 
-print("✅ Imágenes nuevas generadas en la carpeta 'imagenes_espaciales'.")
+print("Imágenes nuevas generadas en la carpeta 'imagenes_espaciales'.")
+
