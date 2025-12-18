@@ -1,0 +1,1 @@
+Durbin-Watson statistic: 2.630
