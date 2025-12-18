@@ -1,7 +1,3 @@
----
-title: "Imágenes a partir de datos socioeconómicos"
----
-
 ## Descripción
 
 En esta sección se presentan imágenes generadas a partir del análisis de
@@ -27,3 +23,4 @@ imagenes_espaciales/
 ├── inflacion_sudamerica.png
 ├── desigualdad_gini.png
 └── pbi_per_capita.png
+
